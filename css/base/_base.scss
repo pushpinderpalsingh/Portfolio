@@ -1,0 +1,73 @@
+html,
+body {
+    overflow-x: hidden !important;
+    max-width: 100vw;
+    font-size: 12px;
+    background-color: $color-white;
+    @include atSmall {
+        font-size: 14px;
+    }
+    @include atMedium {
+        font-size: 15px;
+    }
+    @include atLarge {
+        font-size: 16px;
+    }
+}
+
+body {
+    @include atSmall {
+        padding: 2.5rem 2.5rem 0 2.5rem;
+    }
+}
+
+main {
+    margin-top: 2.5rem;
+    position: relative;
+    padding: 0 15px;
+    @include atSmall {
+        padding: 0 30px;
+        margin-top: 37rem;
+    }
+    @include atMedium {
+        margin-top: 39rem;
+    }
+    @include atExtralarge {
+        margin-top: 37rem;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul,
+ol,
+span {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+input,
+button {
+    border: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+    text-shadow: 0px 0px 5px rgba($color-dark, .5);
+}
